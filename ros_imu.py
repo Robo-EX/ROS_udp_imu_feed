@@ -40,12 +40,13 @@ if __name__ == "__main__":
                 rospy.loginfo("Recieving Socket Data")
                 closeSocket = True
 
-            list = data.split(",")
+            # list = data.split(",")
             # values = struct.unpack('<ddddd', data)
             # rospy.loginfo(value)
-            sensor_array = []
-            for i in list:
-                sensor_array.append(float(i))
+            #sensor_array = []
+            sensor_array = list(map(float, data.split(",")))
+            #for i in list:
+            #    sensor_array.append(float(i))
                 # if sensor_array[5:]:
                 #     print(sensor_array[5:])
                 #     continue
