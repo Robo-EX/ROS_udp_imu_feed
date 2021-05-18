@@ -19,12 +19,12 @@ def talker():
 
     while not rospy.is_shutdown():
         data, addr = sock.recvfrom(8192)  # buffer size is 7*8 bytes
-        list = data.split(",")
+        # list = data.split(",")
         # values = struct.unpack('<ddddd', data)
         # rospy.loginfo(value)
         sensor_array = list(map(float, data.split(",")))
-        #sensor_array = []
-        #for i in list:
+        # sensor_array = []
+        # for i in list:
          #   sensor_array.append(float(i))
             # if sensor_array[5:]:
             #     print(sensor_array[5:])
